@@ -73,8 +73,12 @@ body {
     cursor: pointer;
 }
 
-/*rules button*/
+/*footer and rules button*/
 
-.rules-btn {
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    
     
 }
