@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    background: rgb(60, 90, 16);
+    background: radial-gradient(rgb(93, 146, 14));
+}
