@@ -53,3 +53,24 @@ body {
     margin-left: 20px;
     margin-top: 5px;
 }
+
+/*game area*/
+
+.game {
+    position: relative;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.choice-btn {
+    height: 100px;
+    width: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(111, 139, 67);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+ 
