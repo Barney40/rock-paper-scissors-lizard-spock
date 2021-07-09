@@ -77,7 +77,7 @@ body {
 
 .footer {
     position: fixed;
-    bottom: 0;       
+    bottom: 0;        
 }
 
 .rules-btn {
@@ -87,6 +87,5 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: inherit;
-    letter-spacing: 0.1em;
-    
+    letter-spacing: 0.1em;    
 }
