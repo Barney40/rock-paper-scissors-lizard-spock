@@ -7,6 +7,49 @@
 
 body {
     font-family: Lato, sans-serif;
-    background: rgb(60, 90, 16);
-    background: radial-gradient(rgb(93, 146, 14));
+    background-color: rgb(111, 150, 52);
+}
+
+/*container*/
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 900px;
+    text-align: center;
+    background-color: rgb(94, 143, 20);
+}
+
+/*header*/
+
+.header {
+    border: 3px solid;
+    border-color: greenyellow;
+    border-radius: 2em;
+    height: 100%;
+    font-size: 45px;
+    margin-top: 20px;
+    font-family: Roboto;
+    letter-spacing: 0.08em;
+    font-weight: 200;
+}
+
+.score {
+    display: flex;
+    flex-direction: row;   
+    justify-content: center;
+    margin-top: 20px;  
+    border: 3px solid;
+    border-color: greenyellow; 
+}
+
+.score-title {
+    font-size: 30px;
+    letter-spacing: 0.08em;
+}
+
+.score-tally {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 5px;
 }
