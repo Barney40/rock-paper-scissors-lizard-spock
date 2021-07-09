@@ -73,12 +73,19 @@ body {
     cursor: pointer;
 }
 
-/*footer and rules button*/
+/*position rules button at foot of page and style*/
 
 .footer {
     position: fixed;
-    left: 0;
-    bottom: 0;
-    
+    bottom: 0;       
+}
+
+.rules-btn {
+    background-color: rgb(111, 139, 67);
+    cursor: pointer;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: inherit;
     
 }
