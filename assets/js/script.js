@@ -73,13 +73,13 @@ choiceButtons.forEach( button => {
 
 function choose(choice) {
     const compchoice = compChoose()
-    displayResults([choice, compchoice])
+    displayResults([choice, compchoice]);
 }
 
 //To give random choice for computer
-functon compChoose() {
+function compChoose() {
     const rand = Math.floor(Math.random() * CHOICES.length)
-    return CHOICES[rand]
+    return CHOICES[rand];
 }
 
 //Loop through the 2 results Div's and add the icon images
