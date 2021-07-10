@@ -81,8 +81,33 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding-top: 30px;
-    
 }
+
+/*define results area*/
+
+.results-heading:first-of-type {
+    grid-area: you-title;
+}
+
+.results-heading:last-of-type {
+    grid-area: computer-title;
+}
+
+.results-result:first-of-type {
+    grid-area: you-picked ;
+}
+
+.results-result:last-of-type {
+    grid-area: the-computer-picked;
+}
+
+
+
+
+
+    
+
+
 
 /*position rules button and close button at foot of page and style*/
 
