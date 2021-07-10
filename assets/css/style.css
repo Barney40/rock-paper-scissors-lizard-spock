@@ -70,6 +70,20 @@ body {
     cursor: pointer;
 }
 
+/*results*/
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    grid-template-areas: 
+    "you-title computer-title";
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 30px;
+    
+}
+
 /*position rules button and close button at foot of page and style*/
 
 .footer {
@@ -113,3 +127,4 @@ body {
     opacity: 1;
     pointer-events: none;
 }
+
