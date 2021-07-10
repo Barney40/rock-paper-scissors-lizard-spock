@@ -10,22 +10,20 @@ body {
     background-color: rgb(111, 150, 52);
 }
 
-/*container*/
+/*header container*/
 
-.container {
+.header-container {
     position: relative;
     margin: 0 auto;
     max-width: 900px;
     text-align: center;
-    background-color: rgb(94, 143, 20);
+    background-color: rgb(111, 139, 67);
 }
 
 /*header*/
 
 .header {
-    border: 3px solid;
-    border-color: greenyellow;
-    border-radius: 2em;
+    
     height: 100%;
     font-size: 45px;
     margin-top: 20px;
@@ -39,8 +37,7 @@ body {
     flex-direction: row;
     justify-content: center;
     margin-top: 20px;
-    border: 3px solid;
-    border-color: greenyellow;
+    
 }
 
 .score-title {
