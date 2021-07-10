@@ -36,11 +36,11 @@ body {
 
 .score {
     display: flex;
-    flex-direction: row;   
+    flex-direction: row;
     justify-content: center;
-    margin-top: 20px;  
+    margin-top: 20px;
     border: 3px solid;
-    border-color: greenyellow; 
+    border-color: greenyellow;
 }
 
 .score-title {
@@ -73,11 +73,11 @@ body {
     cursor: pointer;
 }
 
-/*position rules button at foot of page and style*/
+/*position rules button and close button at foot of page and style*/
 
 .footer {
     position: fixed;
-    bottom: 0;        
+    bottom: 0;
 }
 
 .rules-btn {
@@ -87,9 +87,23 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: inherit;
-    letter-spacing: 0.1em;    
+    letter-spacing: 0.1em;
 }
 
 /*popup container for the rules*/
+/*width to equal width of image*/
 
+.popup {
+    width: 493px;
+    padding-top: 40px;
+}
 
+.close-btn {
+    background-color: rgb(111, 139, 67);
+    cursor: pointer;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: inherit;
+    letter-spacing: 0.1em;
+}
