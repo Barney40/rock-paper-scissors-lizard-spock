@@ -23,7 +23,7 @@ body {
 /*header*/
 
 .header {
-    
+
     height: 100%;
     font-size: 45px;
     margin-top: 20px;
@@ -37,7 +37,7 @@ body {
     flex-direction: row;
     justify-content: center;
     margin-top: 20px;
-    
+
 }
 
 .score-title {
@@ -73,8 +73,8 @@ body {
 /*position rules button and close button at foot of page and style*/
 
 .footer {
-    position: fixed;
     bottom: 0;
+    position: fixed;
 }
 
 .rules-btn {
@@ -109,7 +109,7 @@ body {
 
 /*add class to enable popup to show*/
 
-.show-pop-up {
+.show-popup {
     opacity: 1;
     pointer-events: none;
 }
