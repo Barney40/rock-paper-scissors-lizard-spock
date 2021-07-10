@@ -61,7 +61,7 @@ let resultDivs = document.querySelectorAll('.results-result');
 //Will loop through the choice array above and return the choice name that matches
 //the one selected
 
-choiceButtons.forEach( button => {
+choiceButtons.forEach(button => {
     button.addEventListener('click', () => {
         let choiceName = button.dataset.choice;
         let choice = CHOICES.find(choice => choice.name === choiceName);
@@ -89,14 +89,13 @@ function displayResults(results) {
     resultDivs.forEach((resultDiv, idx) => {
         setTimeout(() => {
             resultDiv.innerHTML = `
-            <div class = "choice ${results[idx].name}">
-            <i class="far fa-hand-${results[idx].name}" alt="${results[idx].name}
-            </div>`;
-        }, idx * 1000);
-    })
+                <div class="choice ${results[idx].name}">
+                    <i class="far fa-hand-${results[idx].name}" alt="${results[idx].name}"/>
+                </div>
+            `;
+        }, idx * 1000);    
+    });
 }
-
-
 
 //Show/hide rules when rules/close buttons are clicked
 
