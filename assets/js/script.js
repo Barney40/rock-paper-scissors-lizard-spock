@@ -57,6 +57,9 @@ const gameDiv = document.querySelector('.game');
 const resultsDiv = document.querySelector('.results');
 const resultDivs = document.querySelectorAll('.results-result');
 
+const resultWinner = document.querySelector(".results-winner");
+const resultText = document.querySelector("result-text");
+
 //Game logic
 //Will loop through the choice array above and return the choice name that matches
 //the one selected
@@ -69,11 +72,13 @@ choiceButtons.forEach(button => {
     });
 });
 
-//Create function for choose and display both user and computer choice
+//function to display results and also winner
 
 function choose(choice) {
     const compchoice = compChoose();
     displayResults([choice, compchoice]);
+    displayWinner([choice, compchoice]);
+
 }
 
 //To give random choice for computer
@@ -95,6 +100,28 @@ function displayResults(results) {
             `;
         }, idx * 1000);    
     });
+}
+
+function displayWinner(results) {
+    setTimeout(() => {
+        const userWins = isWinner(results);
+        const compWins = isWinner(results.reverse());
+
+        if(userWins) {
+            resultText.innerText = "You Win";
+        }   else if(compWins) {
+            resultText.innerText = "You Lose";
+        }   else {
+            resultText.innerText = "Draw";
+        } 
+        resultWinner.classList.toggle('hidden');
+        resultsDiv.classList.toggle('show-winner');
+    }, 1000);
+}
+ 
+
+function isWinner(results) {
+    return results[0].beats === results[1].name;
 }
 
 //Show/hide rules when rules/close buttons are clicked

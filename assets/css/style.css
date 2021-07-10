@@ -112,7 +112,31 @@ body {
     width: 100px;
     height: 100px;
     background: rgb(111, 139, 67);
-   margin-top: 30px;
+    margin-top: 30px;
+}
+
+.results-winner {
+    grid-area: result-winner;
+    display: grid;
+    place-items: center;
+}
+
+.results-text {}
+
+.play-again {
+    background: rgb(111, 139, 67);
+    outline: none;
+    border: 2px solid transparent;
+    font-family: inherit;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+}
+
+.results.show-winner {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "you-title . comp-title"
+        "you-picked result-winner comp-pickec";
 }
 
 /*position rules button at foot of page and style*/
@@ -152,7 +176,7 @@ body {
     letter-spacing: 0.1em;
 }
 
-/*add class to enable popup to show*/
+/*to enable popup to show*/
 
 .show-popup {
     opacity: 1;
