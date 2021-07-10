@@ -57,6 +57,17 @@ const gameDiv = document.querySelector('.game')
 const resultsDiv = document.querySelector('.results')
 const resultDivs = document.querySelectorAll('.results-result')
 
+//Game logic
+
+choiceButtons.forEach( button => {
+    button.addEventListener('click', () => {
+        const choiceName = button.dataset.choice;
+        const choice = CHOICES.find(choice => choice.name === choiceName)
+        choose(choice)
+    })
+})
+
+
 
 //Show/hide rules when rules/close buttons are clicked
 
