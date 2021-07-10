@@ -91,8 +91,8 @@ function displayResults(results) {
             resultDiv.innerHTML = `
             <div class = "choice ${results[idx].name}">
             <i class="far fa-hand-${results[idx].name}" alt="${results[idx].name}
-            </div>`
-        })
+            </div>`;
+        }, idx * 1000);
     })
 }
 
