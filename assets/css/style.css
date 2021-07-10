@@ -93,6 +93,8 @@ body {
 .popup {
     width: 493px;
     padding-top: 40px;
+    opacity: 0;
+    pointer-events: initial;
 }
 
 .close-btn {
@@ -103,4 +105,11 @@ body {
     padding-bottom: 10px;
     font-family: inherit;
     letter-spacing: 0.1em;
+}
+
+/*add class to enable popup to show*/
+
+.show-pop-up {
+    opacity: 1;
+    pointer-events: none;
 }
