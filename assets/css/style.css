@@ -104,10 +104,16 @@ body {
 
 /*results header*/
 
+.results-header {
+    letter-spacing: 0.08;
+}
 
-
-
-
+.results-result {
+    width: 100px;
+    height: 100px;
+    background: rgb(111, 139, 67);
+   margin-top: 30px;
+}
 
 /*position rules button and close button at foot of page and style*/
 
