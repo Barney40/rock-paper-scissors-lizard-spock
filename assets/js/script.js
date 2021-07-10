@@ -2,13 +2,13 @@
 
 //For the opening and closing of the rules
 
-let btnRules = document.querySelector('.rules-btn');
-let btnClose = document.querySelector('.close-btn');
-let popupRules = document.querySelector('.popup');
+const btnRules = document.querySelector('.rules-btn');
+const btnClose = document.querySelector('.close-btn');
+const popupRules = document.querySelector('.popup');
 
 //To be used to decide who wins
 
-let CHOICES = [{
+const CHOICES = [{
         name: "rock",
         beats: "scissors"
     },
@@ -52,10 +52,10 @@ let CHOICES = [{
 
 //To show what you pick and also what the computer picks
 
-let choiceButtons = document.querySelectorAll('.choice-btn');
-let gameDiv = document.querySelector('.game');
-let resultsDiv = document.querySelector('.results');
-let resultDivs = document.querySelectorAll('.results-result');
+const choiceButtons = document.querySelectorAll('.choice-btn');
+const gameDiv = document.querySelector('.game');
+const resultsDiv = document.querySelector('.results');
+const resultDivs = document.querySelectorAll('.results-result');
 
 //Game logic
 //Will loop through the choice array above and return the choice name that matches
@@ -63,8 +63,8 @@ let resultDivs = document.querySelectorAll('.results-result');
 
 choiceButtons.forEach(button => {
     button.addEventListener('click', () => {
-        let choiceName = button.dataset.choice;
-        let choice = CHOICES.find(choice => choice.name === choiceName);
+        const choiceName = button.dataset.choice;
+        const choice = CHOICES.find(choice => choice.name === choiceName);
         choose(choice);
     });
 });
@@ -72,13 +72,13 @@ choiceButtons.forEach(button => {
 //Create function for choose and display both user and computer choice
 
 function choose(choice) {
-    let compchoice = compChoose();
+    const compchoice = compChoose();
     displayResults([choice, compchoice]);
 }
 
 //To give random choice for computer
 function compChoose() {
-    let rand = Math.floor(Math.random() * CHOICES.length);
+    const rand = Math.floor(Math.random() * CHOICES.length);
     return CHOICES[rand];
 }
 
