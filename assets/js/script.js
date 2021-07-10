@@ -58,6 +58,8 @@ const resultsDiv = document.querySelector('.results')
 const resultDivs = document.querySelectorAll('.results-result')
 
 //Game logic
+//Will loop through the choice array above and return the choice name that matches
+//the one selected
 
 choiceButtons.forEach( button => {
     button.addEventListener('click', () => {
@@ -66,6 +68,33 @@ choiceButtons.forEach( button => {
         choose(choice)
     })
 })
+
+//Create function for choose and display both user and computer choice
+
+function choose(choice) {
+    const compchoice = compChoose()
+    displayResults([choice, compchoice])
+}
+
+//To give random choice for computer
+functon compChoose() {
+    const rand = Math.floor(Math.random() * CHOICES.length)
+    return CHOICES[rand]
+}
+
+//Loop through the 2 results Div's and add the icon images
+//with a delay on the computer's choice
+
+function displayResults(results) {
+    resultDivs.forEach((resultDiv, idx) => {
+        setTimeout(() => {
+            resultDiv.innerHTML = `
+            <div class = "choice ${results[idx].name}">
+            <i class="far fa-hand-${results[idx].name}" alt="${results[idx].name}
+            </div>`
+        })
+    })
+}
 
 
 
