@@ -50,6 +50,14 @@ const CHOICES = [{
     },
 ]
 
+//To show what you pick and also what the computer picks
+
+const choiceButtons = document.querySelectorAll('.choice-btn')
+const gameDiv = document.querySelector('.game')
+const resultsDiv = document.querySelector('.results')
+const resultDivs = document.querySelectorAll('.results-result')
+
+
 //Show/hide rules when rules/close buttons are clicked
 
 btnRules.addEventListener('click', () => {
