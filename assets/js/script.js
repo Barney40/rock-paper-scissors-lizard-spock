@@ -2,13 +2,13 @@
 
 //For the opening and closing of the rules
 
-const btnRules = document.querySelector('.rules-btn')
-const btnClose = document.querySelector('.close-btn')
-const popupRules = document.querySelector('.popup')
+let btnRules = document.querySelector('.rules-btn');
+let btnClose = document.querySelector('.close-btn');
+let popupRules = document.querySelector('.popup');
 
 //To be used to decide who wins
 
-const CHOICES = [{
+let CHOICES = [{
         name: "rock",
         beats: "scissors"
     },
@@ -48,14 +48,14 @@ const CHOICES = [{
         name: "spock",
         beats: "rock"
     },
-]
+];
 
 //To show what you pick and also what the computer picks
 
-const choiceButtons = document.querySelectorAll('.choice-btn')
-const gameDiv = document.querySelector('.game')
-const resultsDiv = document.querySelector('.results')
-const resultDivs = document.querySelectorAll('.results-result')
+let choiceButtons = document.querySelectorAll('.choice-btn');
+let gameDiv = document.querySelector('.game');
+let resultsDiv = document.querySelector('.results');
+let resultDivs = document.querySelectorAll('.results-result');
 
 //Game logic
 //Will loop through the choice array above and return the choice name that matches
@@ -63,22 +63,22 @@ const resultDivs = document.querySelectorAll('.results-result')
 
 choiceButtons.forEach( button => {
     button.addEventListener('click', () => {
-        const choiceName = button.dataset.choice;
-        const choice = CHOICES.find(choice => choice.name === choiceName)
-        choose(choice)
-    })
-})
+        let choiceName = button.dataset.choice;
+        let choice = CHOICES.find(choice => choice.name === choiceName);
+        choose(choice);
+    });
+});
 
 //Create function for choose and display both user and computer choice
 
 function choose(choice) {
-    const compchoice = compChoose()
+    let compchoice = compChoose();
     displayResults([choice, compchoice]);
 }
 
 //To give random choice for computer
 function compChoose() {
-    const rand = Math.floor(Math.random() * CHOICES.length)
+    let rand = Math.floor(Math.random() * CHOICES.length);
     return CHOICES[rand];
 }
 
@@ -101,9 +101,9 @@ function displayResults(results) {
 //Show/hide rules when rules/close buttons are clicked
 
 btnRules.addEventListener('click', () => {
-    popupRules.classList.toggle('show-popup')
+    popupRules.classList.toggle('show-popup');
 });
 
 btnClose.addEventListener('click', () => {
-    popupRules.classList.toggle('show-popup')
+    popupRules.classList.toggle('show-popup');
 });
