@@ -76,8 +76,9 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
-    grid-template-areas: 
-    "you-title computer-title";
+    grid-template-areas:
+        "you-title computer-title"
+        "you-picked computer-picked";
     max-width: 1000px;
     margin: 0 auto;
     padding-top: 30px;
@@ -94,18 +95,17 @@ body {
 }
 
 .results-result:first-of-type {
-    grid-area: you-picked ;
+    grid-area: you-picked;
 }
 
 .results-result:last-of-type {
-    grid-area: the-computer-picked;
+    grid-area: computer-picked;
 }
 
+/*results header*/
 
 
 
-
-    
 
 
 
@@ -152,4 +152,3 @@ body {
     opacity: 1;
     pointer-events: none;
 }
-
