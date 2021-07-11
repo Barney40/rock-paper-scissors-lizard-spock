@@ -136,7 +136,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
         "you-title . comp-title"
-        "you-picked result-winner comp-pickec";
+        "you-picked result-winner comp-picked";
 }
 
 /*position rules button at foot of page and style*/
