@@ -166,16 +166,6 @@ body {
     pointer-events: initial;
 }
 
-.close-btn {
-    background-color: rgb(111, 139, 67);
-    cursor: pointer;
-    padding: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-family: inherit;
-    letter-spacing: 0.1em;
-}
-
 /*to enable popup to show*/
 
 .show-popup {
