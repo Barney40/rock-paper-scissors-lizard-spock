@@ -55,12 +55,16 @@ const CHOICES = [{
 const choiceButtons = document.querySelectorAll('.choice-btn');
 const gameDiv = document.querySelector('.game');
 const resultsDiv = document.querySelector('.results');
-const resultDivs = document.querySelectorAll('.results-result');
+const resultDivs = document.querySelectorAll('.results_result');
 
-const resultWinner = document.querySelector(".results-winner");
-const resultText = document.querySelector(".result-text");
+const resultWinner = document.querySelector(".results_winner");
+const resultText = document.querySelector(".result_text");
 
 const playAgain = document.querySelector(".play-again");
+
+const scoreNumber = document.querySelector('.score_number');
+let score = 0;
+
 
 //Game logic
 //Will loop through the choice array above and return the choice name that matches
@@ -111,8 +115,12 @@ function displayWinner(results) {
 
         if(userWins) {
             resultText.innerText = "You Win";
+            resultDivs[0].classList.toggle("winner");
+            keepScore(1);
         }   else if(compWins) {
             resultText.innerText = "You Lose";
+            resultDivs[1].classList.toggle("winner");
+            keepScore(-1);
         }   else {
             resultText.innerText = "Draw";
         } 
@@ -121,12 +129,16 @@ function displayWinner(results) {
     }, 1000);
 }
  
-
 function isWinner(results) {
     return results[0].beats === results[1].name;
 }
 
-//play again button to reset all
+function keepScore(point) {
+    score += point;
+    scoreNumber.innerText = score;
+}
+
+//play again button to reset all to original state
 
 playAgainBtn.addEventListener('click', () => {
     gameDiv.classList.toggle('hidden')
@@ -134,14 +146,13 @@ playAgainBtn.addEventListener('click', () => {
 
     resultDivs.forEach(resultDiv => {
         resultDiv.innerHTML = ""
-        resultDiv,classList.remove('winner')
+        resultDiv.classList.remove('winner')
     })
 
     resultText.innerText = "";
     resultWinner.classList.toggle('hidden')
     resultsDiv.classList.toggle('show-winner')    
 })
-
 
 //Show/hide rules when rules/close buttons are clicked
 
