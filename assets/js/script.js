@@ -99,8 +99,8 @@ function displayResults(results) {
     resultDivs.forEach((resultDiv, idx) => {
         setTimeout(() => {
             resultDiv.innerHTML = `
-                <div class="choice ${results[idx].name:}">
-                    <i class="far fa-hand-${results[idx].name:}" alt="${results[idx].name:}"/>
+                <div class="choice ${results[idx].name}">
+                    <i class="far fa-hand-${results[idx].name}" alt="${results[idx].name}"/>
                 </div>
             `;
         }, idx * 1000);    
