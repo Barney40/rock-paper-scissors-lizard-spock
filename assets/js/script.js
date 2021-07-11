@@ -58,7 +58,9 @@ const resultsDiv = document.querySelector('.results');
 const resultDivs = document.querySelectorAll('.results-result');
 
 const resultWinner = document.querySelector(".results-winner");
-const resultText = document.querySelector("result-text");
+const resultText = document.querySelector(".result-text");
+
+const playAgain = document.querySelector(".play-again");
 
 //Game logic
 //Will loop through the choice array above and return the choice name that matches
@@ -123,6 +125,23 @@ function displayWinner(results) {
 function isWinner(results) {
     return results[0].beats === results[1].name;
 }
+
+//play again button to reset all
+
+playAgainBtn.addEventListener('click', () => {
+    gameDiv.classList.toggle('hidden')
+    resultsDiv.classList.toggle('hidden')
+
+    resultDivs.forEach(resultDiv => {
+        resultDiv.innerHTML = ""
+        resultDiv,classList.remove('winner')
+    })
+
+    resultText.innerText = "";
+    resultWinner.classList.toggle('hidden')
+    resultsDiv.classList.toggle('show-winner')    
+})
+
 
 //Show/hide rules when rules/close buttons are clicked
 
