@@ -55,14 +55,14 @@ const CHOICES = [{
 const choiceButtons = document.querySelectorAll('.choice-btn');
 const gameDiv = document.querySelector('.game');
 const resultsDiv = document.querySelector('.results');
-const resultDivs = document.querySelectorAll('.results_result');
+const resultDivs = document.querySelectorAll('.results-result');
 
-const resultWinner = document.querySelector(".results_winner");
-const resultText = document.querySelector(".result_text");
+const resultWinner = document.querySelector(".results-winner");
+const resultText = document.querySelector(".result-text");
 
 const playAgain = document.querySelector(".play-again");
 
-const scoreNumber = document.querySelector('.score_number');
+const scoreNumber = document.querySelector('.score-number');
 let score = 0;
 
 
@@ -140,7 +140,7 @@ function keepScore(point) {
 
 //play again button to reset all to original state
 
-playAgainBtn.addEventListener('click', () => {
+playAgain.addEventListener('click', () => {
     gameDiv.classList.toggle('hidden')
     resultsDiv.classList.toggle('hidden')
 
