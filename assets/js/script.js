@@ -51,9 +51,9 @@ const CHOICES = [{
 
 //To show what you pick and also what the computer picks
 
-const choiceButtons = document.querySelectorAll('.choice-btn');
-const gameDiv = document.querySelector('.game');
-const resultsDiv = document.querySelector('.results');
+const choiceButtons = document.querySelectorAll(".choice-btn");
+const gameDiv = document.querySelector(".game");
+const resultsDiv = document.querySelector(".results");
 const resultDivs = document.querySelectorAll('.results-result');
 
 const resultWinner = document.querySelector(".results-winner");
@@ -61,7 +61,7 @@ const resultText = document.querySelector(".result-text");
 
 const playAgain = document.querySelector(".play-again");
 
-const scoreNumber = document.querySelector('.score-number');
+const scoreNumber = document.querySelector(".score-number");
 let score = 0;
 
 
