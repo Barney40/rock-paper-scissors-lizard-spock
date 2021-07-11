@@ -57,7 +57,7 @@ const resultsDiv = document.querySelector(".results");
 const resultDivs = document.querySelectorAll('.results-result');
 
 const resultWinner = document.querySelector(".results-winner");
-const resultText = document.querySelector(".result-text");
+const resultText = document.querySelector(".results-text");
 
 const playAgain = document.querySelector(".play-again");
 
@@ -77,13 +77,12 @@ choiceButtons.forEach(button => {
     });
 });
 
-//function to display results and also winner
+//To display results and also who has won
 
 function choose(choice) {
     const compchoice = compChoose();
     displayResults([choice, compchoice]);
     displayWinner([choice, compchoice]);
-
 }
 
 //To give random choice for computer
