@@ -3,7 +3,6 @@
 //For the opening and closing of the rules
 
 const btnRules = document.querySelector('.rules-btn');
-const btnClose = document.querySelector('.close-btn');
 const popupRules = document.querySelector('.popup');
 
 //To be used to decide who wins
@@ -160,6 +159,3 @@ btnRules.addEventListener('click', () => {
     popupRules.classList.toggle('show-popup');
 });
 
-btnClose.addEventListener('click', () => {
-    popupRules.classList.toggle('show-popup');
-});
